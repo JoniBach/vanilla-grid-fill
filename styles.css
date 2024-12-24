@@ -1,0 +1,54 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  text-align: center;
+}
+
+#board-container {
+  display: inline-block;
+}
+
+/* Each row of the board is a flex container */
+.board-row {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each cell is a 40x40 square with a border */
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+/* Empty cell with no territory */
+.cell.empty {
+  background-color: white;
+}
+
+/* Occupied by Player A */
+.cell.playerA {
+  background-color: lightblue;
+}
+
+/* Occupied by Player B */
+.cell.playerB {
+  background-color: pink;
+}
+
+/* Belongs to A (encapsulated territory) */
+.cell.belongsToA {
+  background-color: lightgreen;
+}
+
+/* Belongs to B (encapsulated territory) */
+.cell.belongsToB {
+  background-color: lightyellow;
+}
